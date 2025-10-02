@@ -1,77 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
      <meta 
      name="viewport" 
      content="width=device-width, initial-scale=1.0">
-    <title>freeCodeCamp Survey Form</title>
+    <title>freeCodeCamp アンケートフォーム</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
       <h1 id="title">
-        freeCodeCamp Survey Form
+        freeCodeCamp アンケートフォーム
         </h1>
       <p id="description">
-        Thank you for taking the time to help us improve the platform
+        プラットフォーム改善のためにご協力いただきありがとうございます
       </p> 
 
     <form id="survey-form">
       <label for="name" id="name-label">
-        Name
+        名前
         <input 
         id="name" 
         name="name" 
         type="text" 
-        placeholder="Enter your name." 
+        placeholder="山田 太郎" 
         required>
       </label>
       
       <label for="email" id="email-label">
-        Email
+        メールアドレス
         <input 
         id="email" 
         name="mail" 
         type="email" 
-        placeholder="Enter your Email." 
+        placeholder="@gmail.com" 
         required>
       </label>
       
-      <label for="number" id="number-label">Age(optional)
+      <label for="number" id="number-label">年齢
         <input 
         id="number" 
         name="number" 
         type="number" 
         min="10" 
         max="100" 
-        placeholder="Enter your Age." 
-        required>
+        placeholder="任意">
       </label>
 
-      <label for="dropdown">Which option best describes your current role?
+      <label for="dropdown">現在の職業を選んでください
         <select 
         id="dropdown"
         name="role">
         <option
-        value="" disabled selected>Sellect current role</option>
-        <option>Submit</option>
-        <option>Full Time Job</option>
-        <option>Full Time Learner</option>
-        <option>Prefer not to say</option>
-        <option>Other</option>
+        value="" disabled selected>選択する</option>
+        <option>学生</option>
+        <option>会社員</option>
+        <option>経営者</option>
+        <option>公務員</option>
+        <option>教職員</option>
+        <option>医療関係者</option>
+        <option>自営業・自由業</option>
+        <option>パート・アルバイト</option>
+        <option>専業主婦(夫)</option>
+        <option>無職・求職中</option>
         </select>
       </label>
       
       <div class="radio">
-      <p>Would you recommend freeCodeCamp to a friend?</p>
+      <p>freeCodeCampを友人に紹介したいと思いますか？</p>
 
         <label class="radio-label">
         <input 
         name="recommend" 
         type="radio" 
         value="1" 
-        required>Definitely
+        required>はい
         </label>
 
         <label class="radio-label">
@@ -79,7 +83,7 @@
           name="recommend" 
           type="radio" 
           value="2" 
-          required>Maybe
+          required>いいえ
           </label>
 
         <label class="radio-label">
@@ -87,57 +91,60 @@
         name="recommend" 
         type="radio" 
         value="3" 
-        required>Not sure
+        required>わからない
         </label>
       </div>
       
-      <label for="select">What is your favorite feature of freeCodeCamp?
+      <label for="select">freeCodeCampでは何のコースを勉強しましたか？
       <select>
         <option
-        value="" disabled selected>Select an option
-        <option>challenges</option>
-        <option>Prijects</option>
-        <option>Community</option>
-        <option>Open Source</option>
+        value="" disabled selected>選択する
+        <option>レスポンシブウェブデザイン</option>
+        <option>JavaScript</option>
+        <option>フロントエンド開発ライブラリ</option>
+        <option>データ可視化</option>
+        <option>リレーショナルデータベース</option>
+        <option>バックエンド開発とAPI</option>
+     　 <option>品質保証</option>
       </select>  
       </label>
 
     <div class="check">
-      <p>What would you like to see improved? (Check all that apply)
+      <p>改善してほしい点はありますか？（複数選択可）
       </p>
       <label class="check-box">
            <input 
            type="checkbox" 
            name="improved" 
-           value="1">Front-end Projects
+           value="1">フロントエンドプロジェクト
       </label>
 
       <label class="check-box">
            <input 
            type="checkbox" 
            name="improved" 
-           value="2">Back-end Projects
+           value="2">バックエンドプロジェクト
       </label>
 
       <label class="check-box">
            <input 
            type="checkbox" 
            name="improved" 
-           value="3">Data Visualization
+           value="3">データ可視化
       </label>
 
       <label class="check-box">
           <input 
           type="checkbox" 
           name="improved" 
-          value="4">Challenges
+          value="4">チャレンジ
       </label>
 
       <label class="check-box">
           <input 
           type="checkbox" 
           name="improved" 
-          value="5">Open Source Community
+          value="5">オープンソースコミュニティ
       </label>
 
       <label class="check-box">
@@ -151,34 +158,34 @@
           <input 
           type="checkbox" 
           name="improved" 
-          value="7">Gitter help rooms
+          value="7">フォーラム
       </label>
 
       <label class="check-box">
           <input 
           type="checkbox" 
           name="improved" 
-          value="8">Videos
+          value="8">動画
       </label>
 
       <label class="check-box">
           <input 
           type="checkbox" 
           name="improved" 
-          value="9">City Meetups
+          value="9">Gitterのヘルプルーム
       </label>
 
       <label class="check-box">
           <input 
           type="checkbox" 
           name="improved" 
-          value="10">Wiki
+          value="10">送信機能
       </label> 
 
     </div>  
 
     <div class="text">
-      <p>Any comments or suggestions?</p>
+      <p>ご意見・ご感想があればご記入ください</p>
       <textarea 
       id="any" 
       name="any"
@@ -189,7 +196,7 @@
 
     <input 
        type="submit" 
-       value="Submit" 
+       value="送信する" 
        id="submit">
 
      </form>
