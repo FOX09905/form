@@ -72,12 +72,14 @@ body::before {
 
 #title, #description{
 	text-align:center;
-	font:20px;
+	font-size:20px;
 }
 
 #title{
 	margin-top:70px;
 	font-size:30px;
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 #description{
@@ -85,6 +87,10 @@ body::before {
 	font-size:15px;
 	font-weight:100;
 	font-style:italic;
+}
+
+.br{
+  display:none;
 }
 
 form{
@@ -177,4 +183,26 @@ textarea{
 
 #submit:hover{
   background-color:#45a049;
+}
+
+#name::placeholder,#email::placeholder,#number::placeholder,textarea::placeholder{
+  color:gray;
+  padding:6px 0 0 6px;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .br{
+  display:inline;
+}
+  
+  #title,#description{
+    line-height:1.2;
+  }
+  
+  #survey-form{
+    width: 400px;
+  }
+   
 }
